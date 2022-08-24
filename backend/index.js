@@ -10,7 +10,7 @@ admin.initializeApp({
 });
 
 
-const port = 3001;                                                    
+const port = 3002;                                                    
 app.get('/', (req, res) => {
     res.send('SmartCookie.App');
 });
@@ -40,4 +40,4 @@ app.get('/email', async(req, res) => {
       res.send('See your console for result');
     
 });
-app.listen(port, () => console.log(`App listening on port ${port}!`));      //listening on port 3001
+app.listen(port, () => console.log(`App listening on port ${port}!`));      //listening on port 3002

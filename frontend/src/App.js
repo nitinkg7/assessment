@@ -1,7 +1,7 @@
 import React, { useState,useRef } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Modal, Button } from "react-bootstrap";
+import QuestionModal from './components/QuestionModal';
 import sourceVideo from "./assets/move_and_Add_Add_and_Move _ Jack_Hartmann_Addition_Song.mp4";
 var myInterval=null;
 
@@ -73,23 +73,7 @@ function App() {
     <div>
     </div>
     <div className='modalclass'>
-      <Modal show={show} onHide={handleClose}  backdrop="static" keyboard={false} centered >
-        <Modal.Header>
-          <Modal.Title>Question</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{questionObject.questionText}</Modal.Body>
-        
-        <Modal.Footer>
-        {questionObject.options.map((optionText,index)=>{
-          return(
-            <Button key={index} variant="primary" 
-             onClick={index+1 === questionObject.rightAnswer?handleClose:wrongAnswerAlert}>
-            {optionText}
-          </Button>  
-          );
-        })}
-        </Modal.Footer>
-      </Modal>
+      <QuestionModal questionObject={questionObject} show={show} handleClose={handleClose} wrongAnswerAlert={wrongAnswerAlert}/>
     </div>
     </div>
   );
