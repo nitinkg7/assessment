@@ -7,7 +7,7 @@ var myInterval=null;
 
 //question to ask
 const questionObject = {questionText:'3+2=?',options:["4","5","6","7"],rightAnswer:2}  
-const timestamp = 63;       //timestamp to pop the question
+const timestamp = 64;       //timestamp to pop the question
 
 
 function App() {
