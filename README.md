@@ -15,9 +15,9 @@ After cloning git repo
 
 ### `npm run start`
 
-Now your backend server will be running at port 3001
+Now your backend server will be running at port 3002
 
-go to your browser and hit http://localhost:3001/email
+go to your browser and hit http://localhost:3002/email
 
 Now
 ### `cd ..`
